@@ -26,13 +26,14 @@ while respuesta != "salir":
             for i in range(l.cant):
                 if b.libros[i]["cod"] == codigo:
                     encontrado = True
-                    print(f"Autor: ",b.libros[i]["autor"])
-                    print(f"Titulo: ",b.libros[i]["titulo"])
-                    print(f"Disponibles: ",b.libros[i]["cant_ej_ad"])
+                    if b.libros[i]["cant_ej_ad"] > 0:
+                        print(f"Autor: ",b.libros[i]["autor"])
+                        print(f"Titulo: ",b.libros[i]["titulo"])
+                        print(f"Disponibles: ",b.libros[i]["cant_ej_ad"])
+                    else:
+                        print("No quedan libros disponibles con este código.")    
             if encontrado == False:
                 print("Codigo erroneo.")
-
-
 
 
             print()
