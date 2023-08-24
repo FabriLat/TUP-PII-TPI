@@ -1,7 +1,7 @@
 # Trabajo Práctico I - Programación II
-
-
 import os
+import bibloteca as b
+import libro as l
 
 print("Bienvenido!")
 respuesta = ''
@@ -21,6 +21,20 @@ while respuesta != "salir":
     if opt.isnumeric():
         if int(opt) == 1:
             #completar
+            encontrado = False
+            codigo = input("Ingrese el código del libro: ")
+            for i in range(l.cant):
+                if b.libros[i]["cod"] == codigo:
+                    encontrado = True
+                    print(f"Autor: ",b.libros[i]["autor"])
+                    print(f"Titulo: ",b.libros[i]["titulo"])
+                    print(f"Disponibles: ",b.libros[i]["cant_ej_ad"])
+            if encontrado == False:
+                print("Codigo erroneo.")
+
+
+
+
             print()
         elif int(opt) == 2:
             #completar
@@ -36,10 +50,10 @@ while respuesta != "salir":
             print()
         elif int(opt) == 6:
             respuesta = "salir"
-        else: print("Ingrese una opción válida")
+        elif (int(opt) < 1 or int(opt) > 6): 
+            print("Error, la opción elegida está fuera del rango 1-6")
     else: 
-        print("Ingrese una opción numérica")
-    
+        print("Ingrese una opción numérica que esté dentro del rango 1-6")
     input("Presione cualquier tecla para continuar....") # Pausa
 
 print("Hasta luego!.")
