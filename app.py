@@ -23,19 +23,22 @@ while respuesta != "salir":
             #completar
             encontrado = False
             codigo = input("Ingrese el código del libro: ")
+            
             for i in range(l.cant):
                 if b.libros[i]["cod"] == codigo:
                     encontrado = True
                     if b.libros[i]["cant_ej_ad"] > 0:
+                        print(b.libros[i]["cant_ej_ad"])
                         print(f"Autor: ",b.libros[i]["autor"])
                         print(f"Titulo: ",b.libros[i]["titulo"])
                         print(f"Disponibles: ",b.libros[i]["cant_ej_ad"])
+                        b.libros[i]["cant_ej_ad"] = b.libros[i]["cant_ej_ad"] - 1
                     else:
                         print("No quedan libros disponibles con este código.")    
             if encontrado == False:
                 print("Codigo erroneo.")
 
-
+            b.libros[i]["cant_ej_ad"]
             print()
         elif int(opt) == 2:
             #completar
