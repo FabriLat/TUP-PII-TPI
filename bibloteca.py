@@ -11,14 +11,17 @@ libros.append(l.libro3)
 
 def ejemplares_prestados(libros):
 #completar
+        prestados = False
         for i in range(l.cant):
             if libros[i]["cant_ej_pr"]  > 0:
+                prestados = True
                 print(f"Libro {i+1}: ")
                 print(f"Titulo: ",libros[i]["titulo"])
                 print(f"Autor: ",libros[i]["autor"])
                 print(f"Cantidad prestados: {libros[i]['cant_ej_pr']}")
                 print("==============================================")
-        return
+        if prestados == False:
+            return print("No hay libros prestados.")
 
 def registrar_nuevo_libro():
     nuevo_libro = l.nuevo_libro()
