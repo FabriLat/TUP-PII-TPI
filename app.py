@@ -23,6 +23,7 @@ while respuesta != "salir":
             b.prestar_ejemplar_libro(b.libros)
         elif int(opt) == 2:
             #completar
+            b.devolver_ejemplar_libro(b.libros)
             print()
         elif int(opt) == 3:
             #completar
