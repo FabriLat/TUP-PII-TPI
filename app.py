@@ -33,6 +33,7 @@ while respuesta != "salir":
             print()
         elif int(opt) == 5:
             #completar
+            b.ejemplares_prestados(b.libros)
             print()
         elif int(opt) == 6:
             respuesta = "salir"

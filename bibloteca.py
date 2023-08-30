@@ -9,9 +9,16 @@ libros.append(l.libro1)
 libros.append(l.libro2)
 libros.append(l.libro3)
 
-def ejemplares_prestados():
-    # completar
-    return None
+def ejemplares_prestados(libros):
+#completar
+        for i in range(l.cant):
+            if libros[i]["cant_ej_pr"]  > 0:
+                print(f"Libro {i+1}: ")
+                print(f"Titulo: ",libros[i]["titulo"])
+                print(f"Autor: ",libros[i]["autor"])
+                print(f"Cantidad prestados: {libros[i]['cant_ej_pr']}")
+                print("==============================================")
+        return
 
 def registrar_nuevo_libro():
     nuevo_libro = l.nuevo_libro()
@@ -53,20 +60,18 @@ def devolver_ejemplar_libro(libros):
     codigo = input("Ingrese el código del libro: ")
     for i in range(l.cant):
         if libros[i]["cod"] == codigo:
+            encontrado = True
             if libros[i]["cant_ej_pr"] > 0:  
-                encontrado = True
                 print(f"cantidad de libros prestados: {libros[i]['cant_ej_pr']}")
                 libros[i]["cant_ej_ad"] = libros[i]["cant_ej_ad"] + 1
                 libros[i]["cant_ej_pr"] = libros[i]["cant_ej_pr"] - 1
                 input("Pulse 'ENTER' para realizar la devolución...")
                 os.system ("cls")
-                print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")
-                return print("Devolución realizada con éxito.")
+                print("Devolución realizada con éxito.")
+                return print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")
+                
             else:
                 return print("Este libro no tiene ejemplares prestados.")
-        else:
-            return print("Codigo erroneo.")
-
 
 def nuevo_libro():
     #completar
