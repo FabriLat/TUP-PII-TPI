@@ -4,15 +4,17 @@ import os
 # Crear una lista vacía para almacenar los libros
 libros = []
 
+
 # Añadir los diccionarios a la lista
 libros.append(l.libro1)
 libros.append(l.libro2)
 libros.append(l.libro3)
-
-def ejemplares_prestados(libros):
+cant = len(libros)
+print(cant)
+def ejemplares_prestados():
 #completar
         prestados = False
-        for i in range(l.cant):
+        for i in range(len(libros)):
             if libros[i]["cant_ej_pr"]  > 0:
                 prestados = True
                 print(f"Libro {i+1}: ")
@@ -32,11 +34,11 @@ def eliminar_ejemplar_libro():
     #completar
     return None
 
-def prestar_ejemplar_libro(libros):
+def prestar_ejemplar_libro():
     #completar
     encontrado = False
     codigo = input("Ingrese el código del libro: ")
-    for i in range(l.cant):
+    for i in range(len(libros)):
         if libros[i]["cod"] == codigo:
             encontrado = True
             if libros[i]["cant_ej_ad"] > 0:
@@ -57,11 +59,11 @@ def prestar_ejemplar_libro(libros):
         return print("Codigo erroneo")
 
 
-def devolver_ejemplar_libro(libros):
+def devolver_ejemplar_libro():
     #completar
     encontrado = False
     codigo = input("Ingrese el código del libro: ")
-    for i in range(l.cant):
+    for i in range(len(libros)):
         if libros[i]["cod"] == codigo:
             encontrado = True
             if libros[i]["cant_ej_pr"] > 0:  
@@ -71,8 +73,7 @@ def devolver_ejemplar_libro(libros):
                 input("Pulse 'ENTER' para realizar la devolución...")
                 os.system ("cls")
                 print("Devolución realizada con éxito.")
-                return print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")
-                
+                return print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")   
             else:
                 return print("Este libro no tiene ejemplares prestados.")
 
