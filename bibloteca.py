@@ -9,17 +9,15 @@ libros = []
 libros.append(l.libro1)
 libros.append(l.libro2)
 libros.append(l.libro3)
-cant = len(libros)
-print(cant)
 def ejemplares_prestados():
 #completar
         prestados = False
         for i in range(len(libros)):
-            if libros[i]["cant_ej_pr"]  > 0:
+            if libros[i]["cant_ej_pr"] > 0:
                 prestados = True
                 print(f"Libro {i+1}: ")
-                print(f"Titulo: ",libros[i]["titulo"])
-                print(f"Autor: ",libros[i]["autor"])
+                print(f"Titulo: ",libros[i]['titulo'])
+                print(f"Autor: ",libros[i]['autor'])
                 print(f"Cantidad prestados: {libros[i]['cant_ej_pr']}")
                 print("==============================================")
         if prestados == False:
@@ -28,7 +26,8 @@ def ejemplares_prestados():
 def registrar_nuevo_libro():
     nuevo_libro = l.nuevo_libro()
     #completar
-    return None
+    libros.append(nuevo_libro)
+    return print("Nuevo libro agregado.")
 
 def eliminar_ejemplar_libro():
     #completar
@@ -76,7 +75,8 @@ def devolver_ejemplar_libro():
                 return print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")   
             else:
                 return print("Este libro no tiene ejemplares prestados.")
-
+    if encontrado == False:
+        return print("Codigo erroneo.")
 def nuevo_libro():
     #completar
     return None
