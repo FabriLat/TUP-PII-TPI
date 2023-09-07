@@ -10,7 +10,7 @@ libros.append(l.libro1)
 libros.append(l.libro2)
 libros.append(l.libro3)
 cant = len(libros)
-print(cant)
+
 def ejemplares_prestados():
 #completar
         prestados = False
@@ -32,6 +32,10 @@ def registrar_nuevo_libro():
 
 def eliminar_ejemplar_libro():
     #completar
+    codigo = input("Ingrese el código del libro: ")
+    for i in range(len(libros)):
+        if libros[i]["cod"] == codigo:
+            libros.remove(libros[i])
     return None
 
 def prestar_ejemplar_libro():

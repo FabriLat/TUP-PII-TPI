@@ -1,4 +1,4 @@
-# Trabajo Práctico I - Programación II
+3# Trabajo Práctico I - Programación II
 import os
 import bibloteca as b
 print("Bienvenido!")
@@ -27,6 +27,8 @@ while respuesta != "salir":
             print()
         elif int(opt) == 4:
             #completar
+            b.eliminar_ejemplar_libro()
+            print("a")
             print()
         elif int(opt) == 5:
             b.ejemplares_prestados()
