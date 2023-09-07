@@ -5,12 +5,11 @@ print("Bienvenido!")
 respuesta = ''
 
 def menu():
-
-    print("1 - Gestionar Prestamo")
-    print("2 - Gestionar Devolucion")
+    print("1 - Gestionar prestamo")
+    print("2 - Gestionar devolucion")
     print("3 - Registrar nuevo libro")
     print("4 - Eliminar ejemplar")
-    print("5 - Mostrar ejemplares perstados")
+    print("5 - Mostrar ejemplares prestados")
     print("6 - Salir")
 
 while respuesta != "salir":
@@ -24,6 +23,7 @@ while respuesta != "salir":
             b.devolver_ejemplar_libro()
             print()
         elif int(opt) == 3:
+            b.registrar_nuevo_libro()
             #completar
             print()
         elif int(opt) == 4:

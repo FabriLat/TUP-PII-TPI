@@ -75,11 +75,8 @@ def devolver_ejemplar_libro():
                 print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")   
             else:
                 return print("Este libro no tiene ejemplares prestados.")
-            
     if encontrado == False:
         return print("Codigo erroneo.")
-    else:
-        return print("")
 def nuevo_libro():
     #completar
     return None
