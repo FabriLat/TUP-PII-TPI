@@ -4,7 +4,6 @@ import os
 # Crear una lista vacía para almacenar los libros
 libros = []
 
-
 # Añadir los diccionarios a la lista
 libros.append(l.libro1)
 libros.append(l.libro2)
@@ -27,7 +26,7 @@ def registrar_nuevo_libro():
     nuevo_libro = l.nuevo_libro()
     #completar
     libros.append(nuevo_libro)
-    return print("Nuevo libro agregado.")
+    return 
 
 def eliminar_ejemplar_libro():
     #completar
@@ -57,7 +56,6 @@ def prestar_ejemplar_libro():
         libros[i]["cant_ej_ad"]
         return print("Codigo erroneo")
 
-
 def devolver_ejemplar_libro():
     #completar
     encontrado = False
@@ -72,11 +70,14 @@ def devolver_ejemplar_libro():
                 input("Pulse 'ENTER' para realizar la devolución...")
                 os.system ("cls")
                 print("Devolución realizada con éxito.")
-                return print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")   
+                print(f"cantidad actualizada de libros prestados: {libros[i]['cant_ej_pr']}")   
             else:
                 return print("Este libro no tiene ejemplares prestados.")
+            
     if encontrado == False:
         return print("Codigo erroneo.")
+    else:
+        return print("")
 def nuevo_libro():
     #completar
     return None
