@@ -8,7 +8,7 @@ def menu():
     print("1 - Gestionar prestamo")
     print("2 - Gestionar devolucion")
     print("3 - Registrar nuevo libro")
-    print("4 - Elimiar ejemplar")
+    print("4 - Eliminar ejemplar")
     print("5 - Mostrar ejemplares prestados")
     print("6 - Salir")
 
