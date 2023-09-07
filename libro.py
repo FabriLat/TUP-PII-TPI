@@ -17,9 +17,20 @@ def nuevo_libro():
     cant_ej_ad = int(input("Ingrese la cantidad de libros adquiridos: "))
     cant_ej_pr = int(0)
     cod = generar_codigo()
-    diccionario = {'cod': cod,'cant_ej_ad':(cant_ej_ad),'cant_ej_pr': (cant_ej_pr),'titulo': (titulo),'autor': (autor)}
-    print("Titulo:",diccionario["titulo"])
-    print("Autor:",diccionario["autor"])
-    print("Cantidad adquirida:",diccionario["cant_ej_ad"])
-    print("Codigo:",diccionario["cod"])
-    return diccionario
+    nuevo_libro = {
+        "cod": cod,
+        "cant_ej_ad": cant_ej_ad,
+        "cant_ej_pr": cant_ej_pr,
+        "autor": autor,
+        "titulo": titulo
+    }
+    os.system("cls")
+
+    print("Libro registrado con éxito.\n")
+    print("Titulo:",nuevo_libro["titulo"])
+    print("Autor:",nuevo_libro["autor"])
+    print("Cantidad adquirida:",nuevo_libro["cant_ej_ad"])
+    print("Codigo:",nuevo_libro["cod"])
+    return nuevo_libro
+
+  
