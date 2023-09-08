@@ -9,7 +9,7 @@ libros.append(l.libro1)
 libros.append(l.libro2)
 libros.append(l.libro3)
 def ejemplares_prestados():
-#completar
+    #completar
         prestados = False
         for i in range(len(libros)):
             if libros[i]["cant_ej_pr"] > 0:
@@ -30,10 +30,18 @@ def registrar_nuevo_libro():
 
 def eliminar_ejemplar_libro():
     #completar
+    encontrado = False
     codigo = input("Ingrese el código del libro: ")
     for i in range(len(libros)):
         if libros[i]["cod"] == codigo:
+            encontrado = True
             libros.remove(libros[i])
+            return print("Libro eliminado con éxito.")
+
+            
+    if encontrado == False:
+        print("Código erroneo(no existe un libro con ese código).")
+
     return None
 
 def prestar_ejemplar_libro():
@@ -58,7 +66,7 @@ def prestar_ejemplar_libro():
                 return print("No quedan libros disponibles con este código.")
     if encontrado == False:
         libros[i]["cant_ej_ad"]
-        return print("Codigo erroneo")
+        return print("Codigo erroneo(no existe un libro con ese código).")
 
 def devolver_ejemplar_libro():
     #completar
@@ -79,7 +87,7 @@ def devolver_ejemplar_libro():
                 return print("Este libro no tiene ejemplares prestados.")
             
     if encontrado == False:
-        return print("Codigo erroneo.")
+        return print("Código erroneo(no existe un libro con ese código).")
     else:
         return print("")
 def nuevo_libro():

@@ -13,8 +13,23 @@ def generar_codigo():
 def nuevo_libro():
     #completar
     titulo = str(input("Ingrese el titulo del libro: "))
+    while titulo == "":
+        if titulo == "":
+            print("Por favor ingrese un titulo válido.\n")
+            titulo = str(input("Ingrese el titulo del libro: "))
+    print("\n")
     autor = str(input("Ingrese el autor del libro: "))
+    while autor == "":
+        if autor == "":
+            print("Por favor ingrese un autor válido.\n")
+            autor = str(input("Ingrese el titulo del libro: "))
+    print("\n")
     cant_ej_ad = int(input("Ingrese la cantidad de libros adquiridos: "))
+    while cant_ej_ad <= 0:
+        if cant_ej_ad <= 0:
+            print("Por favor ingrese una cantidad válida.\n")
+            cant_ej_ad = int(input("Ingrese la cantidad de libros adquiridos: \n"))
+    print("\n")
     cant_ej_pr = int(0)
     cod = generar_codigo()
     nuevo_libro = {
@@ -32,5 +47,3 @@ def nuevo_libro():
     print("Cantidad adquirida:",nuevo_libro["cant_ej_ad"])
     print("Codigo:",nuevo_libro["cod"])
     return nuevo_libro
-
-  

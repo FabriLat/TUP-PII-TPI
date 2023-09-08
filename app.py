@@ -29,7 +29,6 @@ while respuesta != "salir":
         elif int(opt) == 4:
             #completar
             b.eliminar_ejemplar_libro()
-            print("a")
             print()
         elif int(opt) == 5:
             b.ejemplares_prestados()
